@@ -46,7 +46,3 @@ def extract_examples(split="train", limit=100, out_path="data/stepwise_prompts.j
 
 if __name__ == "__main__":
     extract_examples(split="train", limit=100)
-# import torch
-
-# print("CUDA Available:", torch.cuda.is_available())
-# print("GPU:", torch.cuda.get_device_name(0))
