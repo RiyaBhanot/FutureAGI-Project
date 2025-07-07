@@ -46,3 +46,4 @@ def extract_examples(split="train", limit=100, out_path="data/stepwise_prompts.j
 
 if __name__ == "__main__":
     extract_examples(split="train", limit=100)
+    
