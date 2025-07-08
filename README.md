@@ -97,15 +97,15 @@ Despite best efforts, the following components remain incomplete or partially im
 
 Before settling on the current approach, multiple alternatives were explored:
 
-### 🔹 1. **Reward Model Fine-Tuning (Abandoned)**
+### 1. **Reward Model Fine-Tuning (Abandoned)**
 - Tried loading a reward model and tuning it using binary preferences (`chosen` vs `rejected`).
 - Dropped due to lack of clean reward data and higher complexity.
 
-### 🔹 2. **Full-token LogProb-based Comparison**
+### 2. **Full-token LogProb-based Comparison**
 - Compared the log-probs of `chosen` vs `rejected` across token spans.
 - Did not capture nuanced stepwise reasoning — hence replaced with LLM-generated scores.
 
-### 🔹 3. **Simple SFT-Only Fine-tuning**
+### 3. **Simple SFT-Only Fine-tuning**
 - Initially considered training just a supervised fine-tuned (SFT) model.
 - But this wouldn't test the DPO hypothesis, so effort was redirected toward preference-based fine-tuning.
 
@@ -113,11 +113,11 @@ Before settling on the current approach, multiple alternatives were explored:
 
 ## Final Word
 
-While the final trained model is not present, the **pipeline is architecturally sound** and reflects strong understanding of:
+While the final trained model is not present, the **pipeline is architecturally sound** and reflects my understanding of:
 
 - LLM-based reward modeling
 - DPO formulation
 - HuggingFace `trl` usage
 - Dataset structuring and token-level aggregation
 
-This repo can easily be extended into a working solution with adequate GPU access.
+This repo can easily be extended into a working solution if I get adequate GPU access.
